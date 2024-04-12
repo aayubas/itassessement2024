@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <link rel="stylesheet" href="style.css">
+    
+<style>
+    body{
+        background-image: url('bg.jpg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;  
+        background-size: 100% 100%;
+    }
+    </style>
+    
+</head>
+<body>
+    <div id="about">
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="index.html" target="_blank">Home</a></li>
+                    <li><a href="aboutme.html" target="_blank">About Me</a></li>
+                    <li><a href="services.html" target="_blank">Services</a></li>
+                    <li><a href="gallery.html" target="_blank">Gallery</a></li>
+                    <li><a href="contact.html" target="_blank">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="me.jpg" alt="Photo 1">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p style="color: black;">Hello and welcome to my portfolio!<br><br>
+
+                        I'm Aayusha Basnet, a student with a passion for coding. Through this portfolio, I aim to provide you with a glimpse into my professional journey, showcasing my skills, experiences, and projects.
+                        
+                        Driven by curiosity and a desire for continuous learning, I thrive in dynamic environments where creativity and innovation intersect.
+                        
+                        Throughout my career, I've had the privilege of working on a diverse range of projects, each presenting unique challenges and opportunities for growth. From making invoice system and student profile system, I've honed my abilities in C++ and Python Programming.<br><br>
+                        
+                        Thank you for taking the time to explore my portfolio. I invite you to browse through my work.
+                    </p>
+                    <div class="container">
+                        <div class="tab-titles">
+                            <p class="links active-link" onclick="opentab('skills', event)">Skills</p>
+                            <p class="links" onclick="opentab('education', event)">Education</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>HTML</span><br>Designing basic website</li>
+                                <li><span>C++</span><br>Designing basic invoice system</li>
+                                <li><span>Adobe Photoshop</span><br>Basic mobile application design</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>+2</span><br>Adarsha Vidhya Mandir</li>
+                                <li><span>Bachelors</span><br>The British College</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br><br>
+            <h2 style="color:red;"> MY INTEREST</h2>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Interest/Hobby</th>
+                            <th>Achievements/Experiences</th>
+                            <th>Reflection</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Language Training</td>
+                            <td>Studying Japanese through online lessons</td>
+                            <td>Opens opportunity for communication and cultural understanding.</td>
+                        </tr>
+                        <tr>
+                            <td>Painting</td>
+                            <td>Participated in local drawing competition</td>
+                            <td>Expresses creativity and visual stoory telling</td>
+                        </tr>
+                        <tr>
+                            <td>Sports</td>
+                            <td>Played Badminton</td>
+                            <td>Demonstrates teamwork and physical fitness</td>
+                        </tr>
+                        <tr>
+                            <td>Reading</td>
+                            <td>Finished 20 books in past year</td>
+                            <td>Expands knowledge and empathy through diverse stories</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+    <script>
+        var tablinks = document.getElementsByClassName("links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+    
+        function opentab(tabname, event){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+    <footer class="footer">
+        <div class="footer-info">
+            <p>MyPortfolio</p>
+            <p>Lubhoo, Lalitpur</p>
+        </div>
+        <p>Copyright &copy; Made by Aayusha Basnet.</p>
+    </footer>
+</body>
+</html>
