@@ -1,0 +1,355 @@
+*{
+    margin: 0 auto;
+    padding: 0;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    box-sizing: border-box;
+    max-width: 1320px;
+}
+body{
+    background: #2c2b2b;
+    color: #f9ecec;
+}
+
+.container{
+    padding: 10px 10%;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.face{
+    width: 140px;
+    
+}
+nav ul li{
+    display: inline-block;
+    list-style-type: none;
+    margin: 10px 20px;
+    align-items: left;
+}
+nav ul li a {
+    color:#12de27;
+    text-decoration: none;
+    font-size: 15px;
+    position: relative;
+}
+nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ee2af1;
+    position: absolute;
+    left: 0;
+    bottom:-6px;
+    transition:0.2s;
+}
+nav ul li a:hover::after{
+    width: 100%
+}
+.header-text{
+    margin-top: 20%;
+    font-size: 20px;
+    color: #000000;
+}
+.header-text h1{
+    font-size: 30px;
+    margin-top: 20px;
+}
+.header-text h1 span{
+    color:rgb(107, 18, 223);
+}
+------imagebanner-------
+.allslider {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(25,12,41);
+}
+.slider {
+    position: relative;
+    width: 45%;
+    overflow: hidden;
+}
+.images {
+    display: flex;
+    width: 100%;
+}
+.images img {
+    height: 400px;
+    width: 100%;
+    transition: all 0.15s ease;
+}
+.images input {
+    display: none;
+}
+.dots {
+    display: flex;
+    justify-content: center;
+    margin: 5px;
+}
+.dots label {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    border: solid #fff 3px;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    margin: 5px;
+}
+.dots label:hover {background: #fff;}
+#img1:checked ~ .m1 {
+    margin-left: 0;
+}
+#img2:checked ~ .m2 {
+    margin-left: -100%;
+}
+#img3:checked ~ .m3 {
+    margin-left: -200%;
+}
+#img4:checked ~ .m4 {
+    margin-left: -300%;
+}
+
+/*---------aboutme.html--------*/
+#about{
+    padding: 80px 0;
+    color:#ababaa;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.about-col-1{
+    flex-basis: 35%;
+}
+.about-col-1 img{
+    width: 70%;
+    height: 30vh;
+    border-radius: 15px;
+}
+.about-col-2{
+    flex-basis: 65%
+}
+.sub-title{
+    font-size: 40px;
+    font-weight: 20;
+    color: #ff0000;
+}
+.tab-titles{
+    display: flex;
+    margin: 20px 0 40px;
+}
+.links{
+margin-right: 50px;
+font-size: 18px;
+font-weight: 500;
+cursor: pointer;
+position: relative;
+}
+.links::after{
+    content: '';
+    width: 100%;
+    height: 3px;
+    background: #ee2af1;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.2s;
+}
+.links.active-link::after{
+    width:50%;
+}
+.tab-contents ul li{
+    list-style: none;
+    margin: 10px 0;
+}
+.tab-contents ul li span{
+    color: rgb(146, 18, 215);
+    font-size: 14px;
+}
+.tab-contents{
+    display: none;
+}
+.tab-contents.active-tab{
+    display: block;
+}
+/*---------services.html--------*/
+.services{
+    padding: 30px, 0;
+}
+.services-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+.services-list div{
+    background: #262626;
+    padding: 40px;
+    font-size:13px;
+    font-weight: 300;
+    border-radius: 10px;
+    transition: background 0.3s, transform 0.3s;
+}
+.services-list div h2{
+    font-size: 32px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+.services-list div a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 12px;
+    margin-top: 20px;
+    display: inline-block;
+}
+.services-list div:hover{
+    background: #ff004f;
+    transform: translateY(-10);
+}
+/*---------contact.html--------*/
+.contact-left{
+    flex-basis: 35%;
+}
+.contact-right{
+    flex-basis: 60%;
+}
+.contact-left p{
+    margin-top: 30px;
+}
+.contact-left a {
+    text-decoration: none; 
+    color: red; 
+}
+
+.btn btn2{
+    display: inline-block;
+    background: #ff004f;
+    text-decoration: none;
+}
+.contact-right form{
+    width: 100%;
+}
+form input, form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    color: #ffffff;
+    font-size: 18px;
+    border-radius: 5px;
+}
+form btn2{
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 25px;
+    cursor: pointer;
+}
+.btn-submit {
+    background-color: orange;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-submit:hover {
+    background-color: darkorange;
+}
+/* Existing CSS code */
+
+.contact-left .btn {
+    color: #fff;
+    background-color: #007bff;
+}
+
+.contact-left .btn:hover {
+    background-color: #70acec;
+}
+
+.contact-left .btn.instagram {
+    background-color: #bc2a8d;
+}
+
+.contact-left .btn.instagram:hover {
+    background-color: #c482ac;
+}
+
+.contact-left .btn.linkedin {
+    background-color: #0077b5;
+}
+
+.contact-left .btn.linkedin:hover {
+    background-color: #75a9c1;
+}
+
+.footer{
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    font-weight: 300;
+    margin-top: 20px;
+    border-top: 1px solid #ccc;
+}
+.footer-info {
+    margin-bottom: 10px;
+}
+
+.thumbnails {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 20px; 
+}
+.thumbnails > div {
+    text-align: center; 
+}
+
+.thumbnails a {
+    margin: 5px;
+}
+
+.thumbnails img {
+    max-width: 100%;; 
+    height: auto;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+}
+
+.thumbnails a:hover img {
+    border-color: #777; 
+}
+.table-container {
+    width: 80%;
+    margin: 20px auto;
+}
+
+table {
+    width: 0%;
+    border-collapse: collapse;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(86, 19, 19, 0.1);
+    background-color: #7f2a87;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+}
+
+th {
+    background-color: #1406e6;
+    color: #fff;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
